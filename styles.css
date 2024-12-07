@@ -1,0 +1,426 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern professional font */
+    margin: 0;
+    background: #f4f4f4; /* Light background */
+    color: #333; /* Dark text for readability */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #2a3d66; /* Dark navy blue for professionalism */
+    color: white;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-side {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-pic {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Name - Constant (No blinking) */
+.blinking-name {
+    font-size: 3em;
+    animation: none;
+}
+
+/* Data Analyst Text - Continuous Typewriter Effect */
+.blinking-description {
+    font-size: 1.5em;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 5s steps(20) infinite, no-cursor 0s step-end infinite;
+}
+
+/* Typewriter Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* No cursor animation */
+@keyframes no-cursor {
+    0% {
+        border-right: 2px solid transparent;
+    }
+    100% {
+        border-right: 2px solid transparent;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 40px;
+    background: #fff; /* White background for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* About Me Section */
+#about {
+    background: #e9f1f7; /* Soft light blue background */
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4em;
+    color: #2a3d66; /* Dark navy blue */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-section p, .about-section ul {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Professional Heading Styles */
+.about-section h3 {
+    font-size: 1.8em;
+    color: #2a3d66; /* Consistent dark color for headings */
+    border-bottom: 2px solid #2a3d66; /* Adds a professional underline to section headings */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* My Skills and Education Section */
+.skills-education-container,
+.certifications-experience-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.skills-section, .education-section,
+.certifications-section, .experience-section {
+    flex: 0 0 48%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.skills-section h3, .education-section h3, 
+.certifications-section h3, .experience-section h3 {
+    color: #2a3d66;
+    font-size: 1.6em;
+}
+
+.skills-section ul, .education-section p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.certification-category .certification a {
+    color: #2a3d66; /* Dark navy blue links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.certification-category .certification a:hover {
+    color: #f26d21; /* Bright orange hover effect */
+}
+
+/* Professional Fonts and Spacing */
+.about-section p, .about-section ul {
+    font-family: 'Roboto', sans-serif; /* Professional font for text */
+}
+
+.skills-section, .education-section, .certifications-section, .experience-section {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+
+h3, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hover Effects for Sections and Links */
+.skills-section a, .education-section a {
+    color: #2a3d66;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.skills-section a:hover, .education-section a:hover {
+    color: #f26d21; /* Bright orange hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .left-side {
+        text-align: center;
+    }
+
+    .right-side {
+        width: 100%;
+        height: 250px;
+        background-color: #2a3d66;
+        margin-top: 20px;
+    }
+
+    .profile-pic {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .skills-education-container,
+    .certifications-experience-container {
+        flex-direction: column;
+    }
+
+    .skills-section, .education-section,
+    .certifications-section, .experience-section {
+        flex: 1 1 auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Horizontal Navigation Bar inside Home Section */
+.horizontal-nav {
+    position: absolute;
+    bottom: 600px;
+    left: 49px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.horizontal-nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-nav li {
+    margin: 0 20px;
+}
+
+.horizontal-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.horizontal-nav a:hover {
+    color: #f4f4f4;
+}
+
+
+/* Projects Section */
+.projects-section {
+    background: #e9f1f7; /* Light blue background */
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #2a3d66;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Flex container for project categories */
+.project-categories-container {
+    display: flex;
+    justify-content: space-between; /* Evenly spaces the categories */
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+}
+
+/* Project category container */
+.project-category {
+    flex: 1;
+    min-width: 250px; /* Ensures the columns don't get too narrow on smaller screens */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centers the content inside each category */
+}
+
+.project-category h3 {
+    font-size: 1.8em;
+    color: #2a3d66;
+    margin-bottom: 15px;
+}
+
+/* Project item styling */
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.project-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+}
+
+.project-item a {
+    color: #2a3d66;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-item a:hover {
+    color: #f26d21; /* Bright orange hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-categories-container {
+        flex-direction: column; /* Stacks categories vertically on small screens */
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    background: #e9f1f7; /* Light blue background */
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #2a3d66;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Flex container for contact categories */
+.contact-categories-container {
+    display: flex;
+    justify-content: space-between; /* Evenly spaces the categories */
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+}
+
+/* Contact category container */
+.contact-category {
+    flex: 1;
+    min-width: 250px; /* Ensures the columns don't get too narrow on smaller screens */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centers the content inside each category */
+}
+
+.contact-category h3 {
+    font-size: 1.8em;
+    color: #2a3d66;
+    margin-bottom: 15px;
+}
+
+/* Contact item styling */
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+}
+
+.contact-item a {
+    color: #2a3d66;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #f26d21; /* Bright orange hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-categories-container {
+        flex-direction: column; /* Stacks categories vertically on small screens */
+    }
+}
+
